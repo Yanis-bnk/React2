@@ -4,29 +4,45 @@ import { Component } from 'react';
 import './App.css';
 
 class App extends Component{
-  state={
-    className:'green'
+  constructor(props){
+    super(props)
+    this.state={
+      dz:undefined,
+      maroco:undefined
+    }
   }
-  handelColor=(e)=>{
-    e.preventDefault()
-    this.setState({
-      className:'red'
-    })
-  }
-  handelColor2=(e)=>{
-    e.preventDefault()
-    this.setState({
-      className:'green'
-    })
-  }
- 
+  handleChange1=(e)=> {
+    if(e.target.checked==true && e.target.name=="dz"){
+      this.setState({
+        
+        dz:'dz'
+      })
+    }
+
+    
+    }
+  handleChange=(e)=> {
+    if(e.target.checked==true && e.target.name=="maroco"){
+      this.setState({
+        
+        maroco:'maroco'
+      })
+    }
+
+    
+    }
+
   render (){
     
     return (
       <div className="App">
-             <h1 className={this.state.className}> Yanis beniken de cevital</h1>
-             <button onClick={this.handelColor}> red</button>
-             <button onClick={this.handelColor2}> vert</button>
+           
+             
+             <br/>
+             dz: <input type='checkbox' name='dz' value='dz' onChange={this.handleChange1}/>
+             maroco: <input type='checkbox' name='maroco' value='maroco' onChange={this.handleChange}/>
+             <p>{this.state.dz}</p>
+             <p>{this.state.maroco}</p>
       </div>
     )
   }
