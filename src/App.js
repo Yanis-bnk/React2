@@ -2,33 +2,31 @@
 
 import { Component } from 'react';
 import './App.css';
-import Home from './Home';
+
 class App extends Component{
   state={
-    profile:[
-      {name:"yanis" , lastname:"beniken"},
-      {name:"rayan" , lastname:"hm"},
-      {name:"brahim" , lastname:"imanis"},
-      {name:"yan" , lastname:"ben"},
-      {name:"ra" , lastname:"h"},
-      {name:"br" , lastname:"imas"},
-      
-    ]
+    className:'green'
   }
-  render (){
-    const data=this.state.profile.map((item)=>{
-      return (
-        <ul>
-          <li>{item.name}</li>
-          <li>{item.lastname}</li>
-        </ul>
-      )
-
+  handelColor=(e)=>{
+    e.preventDefault()
+    this.setState({
+      className:'red'
     })
+  }
+  handelColor2=(e)=>{
+    e.preventDefault()
+    this.setState({
+      className:'green'
+    })
+  }
+ 
+  render (){
+    
     return (
       <div className="App">
-        {data}
-
+             <h1 className={this.state.className}> Yanis beniken de cevital</h1>
+             <button onClick={this.handelColor}> red</button>
+             <button onClick={this.handelColor2}> vert</button>
       </div>
     )
   }
