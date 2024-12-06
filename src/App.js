@@ -2,7 +2,8 @@
 
 import { Component } from 'react';
 import './App.css';
-import Yanis from './chatgpt/Yanis';
+
+import Form from './Form/form';
 
 
 
@@ -18,7 +19,7 @@ class App extends Component{
   render (){
     
     return (
-      <Yanis/>      
+      <Form/>     
     )
   }
 }
