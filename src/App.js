@@ -2,7 +2,11 @@
 
 import { Component } from 'react';
 import './App.css';
-import Event from './Event/Event';
+import Yanis from './chatgpt/Yanis';
+
+
+
+
 
 
 
@@ -14,7 +18,7 @@ class App extends Component{
   render (){
     
     return (
-    <Event/>
+      <Yanis/>      
     )
   }
 }
