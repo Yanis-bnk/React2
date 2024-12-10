@@ -4,9 +4,8 @@ import { Component } from 'react';
 import './App.css';
 
 
-import Helloword from './helloword/Helloword';
-import Formj from './Form/formj';
-import Github from './Form/Github';
+
+import Fruit from './Fruits/Fruit';
 
 
 
@@ -14,6 +13,10 @@ import Github from './Form/Github';
 
 
 
+const fruitsArray=[
+  'banane','orange','lemon',
+  'banane','orange','lemon',
+]
 
 
 
@@ -22,9 +25,7 @@ class App extends Component{
   render (){
     
     return (<div>
-      <Helloword lastname="mourad"/> 
-      <Github/>
-      <Formj inputName="nameyansi" inputLabel="wina"/>
+      <Fruit fruits={fruitsArray}/>
       
       
        
