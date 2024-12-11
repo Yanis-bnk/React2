@@ -6,6 +6,7 @@ import './App.css';
 
 
 import Fruit from './Fruits/Fruit';
+import Counter from './counter/Counter';
 
 
 
@@ -25,7 +26,7 @@ class App extends Component{
   render (){
     
     return (<div>
-      <Fruit fruits={fruitsArray}/>
+      <Counter/>
       
       
        
