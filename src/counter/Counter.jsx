@@ -1,4 +1,5 @@
-import { Component, useState } from "react";
+import { Component, useEffect, useState } from "react";
+/*import { Component, useState } from "react";
 export default class Counter extends Component {
     constructor(props) {
         super(props);
@@ -30,8 +31,14 @@ export default class Counter extends Component {
         );
     }
 }
-/*export default function Counter({init,step}){
+*/
+export default function Counter({init,step}){
     const [counter,setCounter]=useState(init)
+    useEffect(()=>{
+        console.log('attan techangii aaa')
+    },[counter])
+
+    
     return <>
     <button onClick={()=>{ setCounter(prevState=>{ return prevState+step} )}} > incremneter</button>
     <button onClick={()=>{ setCounter(prevState=>{ return prevState-step} )}} > decremneter</button>
@@ -39,4 +46,4 @@ export default class Counter extends Component {
     <p>Il y a {counter} secondes</p>
     
     </>
-}*/
+}

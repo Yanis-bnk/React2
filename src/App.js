@@ -8,6 +8,7 @@ import './App.css';
 import Fruit from './Fruits/Fruit';
 import Counter from './counter/Counter';
 import Form from './Form/form';
+import FruitList from './Fruits/FruitList';
 
 
 
@@ -27,7 +28,7 @@ class App extends Component{
   render (){
     
     return (<div>
-      <Counter />
+      <Counter init={0} step={2} />
       
       
       
