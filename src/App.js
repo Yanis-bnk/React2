@@ -7,6 +7,7 @@ import './App.css';
 
 import Fruit from './Fruits/Fruit';
 import Counter from './counter/Counter';
+import Form from './Form/form';
 
 
 
@@ -26,7 +27,8 @@ class App extends Component{
   render (){
     
     return (<div>
-      <Counter/>
+      <Counter />
+      
       
       
        
